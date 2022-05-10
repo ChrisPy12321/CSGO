@@ -1,0 +1,42 @@
+/**
+* name: Chris
+* date 2022-04-29
+* description: grenade class that extends to item. Flashbang that includes enemies flashed 
+*/
+
+public class Flashbang extends Grenade {
+
+  private int enemiesFlashed;
+
+  public Flashbang (double cost, String name, boolean isBought, double killAward, double damage) {
+    super(cost, name, isBought);
+    this.killAward = killAward;
+    this.damage = damage;
+  }
+  
+  public Flashbang (double cost, String name, boolean isBought, int enemiesFlashed) {
+    super(cost, name,isBought);
+    this.enemiesFlashed = enemiesFlashed;
+  }
+  
+    public double getKillAward() {
+    return this.killAward;
+  }
+
+    public int getEnemiesFlashed () {
+    return this.enemiesFlashed;
+  }
+  
+    public double getDamage() {
+    return this.damage;
+  }
+
+    public void flash() {
+      get.enemySkill = enemySkill / 2;
+        System.out.println("flash");
+    }
+  
+  public String toString() {
+		return "\nenemiesFlashed: " + enemiesFlashed + "\ndamage: " + damage + "\nkillAward" + killAward;
+	}
+}
